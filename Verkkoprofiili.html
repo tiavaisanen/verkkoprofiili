@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+  <meta charset="UTF-8">
+  <title>Verkkoprofiilisivu Tiia Väisänen</title>
+  <link rel="stylesheet" href="verkko.css">
+</head>
+
+<body>
+
+  <div class="container">
+
+    <h1>Tiia Väisänen</h1>
+
+    <p><strong>PROFILE</strong></p>
+
+    <img src="./tv.jpg" alt="Täs mä!">
+
+    <p>
+      I’m Tiia – an IT enthusiast who enjoys tackling multiple challenges at once. 
+      I’m particularly passionate about cybersecurity and solving complex bugs. 
+      My goal is to continuously improve my coding skills and gain a deeper understanding 
+      of what happens behind the scenes, because that’s where the real magic lies.
+    </p>
+
+    <h2>Get to know me:</h2>
+
+    <nav>
+      <ul>
+        <li><a href="koulutus.html">Education</a></li>
+        <li><a href="tyohistoria.html">Work History</a></li>
+        <li><a href="osaaminen.html">Skills</a></li>
+      </ul>
+    </nav>
+
+  </div>
+
+<div class="github-box">
+  <h2>GitHub</h2>
+
+  <p>
+    <a id="githubLink" href="#" target="_blank">View GitHub profile</a>
+  </p>
+
+  <p>
+    <strong>Account created:</strong>
+    <span id="created"></span>
+  </p>
+</div>
+
+<script>
+  fetch("https://api.github.com/users/tiavaisanen")
+    .then(response => response.json())
+    .then(data => {
+      document.getElementById("githubLink").href = data.html_url;
+      document.getElementById("created").textContent =
+        new Date(data.created_at).toLocaleDateString();
+    });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Work History</title>
+  <link rel="stylesheet" href="verkko.css">
+</head>
+
+<body>
+
+<div class="container">
+  <h1>Work History</h1>
+
+  <div class="mermaid">
+  flowchart LR
+      A["Cook / Waitress<br>Hanko Aasia<br>2015–2018"] --> B["Barista<br>SSP Finland / StaffPoint Oy<br>2018–2019"]
+      B --> C["Inhouse Sales Specialist<br>Fortum Markets Oy<br>2019–2023"]
+      C --> D["Sales Assistant<br>Shoe House Oy<br>2024–2025"]
+      D --> E["System Specialist<br>Sebitti Oy<br>2024–Present"]
+  </div>
+
+  <div class="work-list">
+
+    <div class="work-item">
+      <h3>System Specialist</h3>
+      <p><strong>Sebitti Oy</strong></p>
+      <p><em>Oct 2024 – Present</em></p>
+      <p>IT environment maintenance, support services, troubleshooting, user management, and cloud services.</p>
+    </div>
+
+    <div class="work-item">
+      <h3>Sales Assistant</h3>
+      <p><strong>Shoe House Oy</strong></p>
+      <p><em>Summer 2024 – March 2025</em></p>
+      <p>Customer service and sales at Click Shoes store in Oulu. Part-time role alongside studies.</p>
+    </div>
+
+    <div class="work-item">
+      <h3>Inhouse Sales Specialist</h3>
+      <p><strong>Fortum Markets Oy</strong></p>
+      <p><em>March 2019 – November 2023</em></p>
+      <p>B2C electricity contract sales and phone-based customer communication.</p>
+    </div>
+
+    <div class="work-item">
+      <h3>Barista</h3>
+      <p><strong>SSP Finland / StaffPoint Oy</strong></p>
+      <p><em>Oct 2018 – Feb 2019</em></p>
+      <p>Served international customers at Helsinki-Vantaa Airport and improved English communication skills.</p>
+    </div>
+
+    <div class="work-item">
+      <h3>Cook / Waitress</h3>
+      <p><strong>Hanko Aasia</strong></p>
+      <p><em>March 2015 – Oct 2018</em></p>
+      <p>Kitchen and customer service duties. Experience in teamwork, responsibility, and training new employees.</p>
+    </div>
+
+  </div>
+
+  <nav>
+    <a href="Verkkoprofiili.html">Back to profile</a>
+  </nav>
+
+</div>
+
+<script type="module">
+  import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+  mermaid.initialize({
+    startOnLoad: true,
+    theme: 'base',
+    themeVariables: {
+      primaryColor: '#001f1b',
+      primaryTextColor: '#00eece',
+      primaryBorderColor: '#00eece',
+      lineColor: '#00eece',
+      fontFamily: 'Courier New'
+    }
+  });
+</script>
+
+</body>
+</html>
